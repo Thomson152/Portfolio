@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-import Logo from '../assets/logo/logo-no-background.png'
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -43,8 +42,11 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={Logo} alt='logo' className='w-20 h-30 object-contain' />
-         
+          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+            Adrian &nbsp;
+            <span className='sm:block hidden'> | JavaScript Mastery</span>
+          </p>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
